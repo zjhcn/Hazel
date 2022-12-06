@@ -1,0 +1,11 @@
+{
+  "C_Cpp.default.configurationProvider": "ms-vscode.makefile-tools",
+  "C_Cpp.default.defines": [
+    "HZ_PLATFORM_WINDOWS",
+    "HZ_BUILD_DLL"
+  ],
+  "C_Cpp.default.includePath": [
+    "${default}",
+    "${workspaceFolder:Hazel}/Hazel/vendor/spdlog/include"
+  ]
+}

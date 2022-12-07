@@ -10,5 +10,10 @@
 			"path": "./Hazel"
 		}
 	],
-	"settings": {}
+	"settings": {
+		"files.associations": {
+			"iosfwd": "cpp",
+			"istream": "cpp"
+		}
+	}
 }

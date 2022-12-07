@@ -8,10 +8,10 @@ build-launch: build
 build: build-hazel build-sandbox
 
 build-hazel:
-	devenv.exe Hazel.sln /Build "Debug|x64" /Project "Hazel\Hazel.vcxproj" /Projectconfig "Debug|x64" /Log build.log
+	devenv.exe Hazel.sln /Build "Debug|x64" /Project "Hazel\Hazel.vcxproj" /Projectconfig "Debug|x64"
 
 build-sandbox:
-	devenv.exe Hazel.sln /project "Sandbox\Sandbox.vcxproj" /build Debug /projectconfig Debug
+	devenv.exe Hazel.sln /build "Debug|x64" /project "Sandbox\Sandbox.vcxproj" /projectconfig "Debug|x64"
 
 configure:
 	./vendor/bin/premake/premake5.exe vs2017

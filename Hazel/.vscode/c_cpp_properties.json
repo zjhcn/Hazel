@@ -4,6 +4,7 @@
             "name": "Hazel",
             "includePath": [
                 "${default}",
+                "${workspaceFolder}/../Hazel/src",
                 "${workspaceFolder}/../Hazel/vendor/spdlog/include"
             ],
             "defines": [

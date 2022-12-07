@@ -1,6 +1,7 @@
 #pragma once
 
 #include "Core.h"
+#include "Events/Event.h"
 
 namespace Hazel {
 
@@ -8,7 +9,7 @@ namespace Hazel {
 	{
 	public:
 		Application();
-		~Application();
+		virtual ~Application();
 
 		void Run();
 	};

@@ -5,7 +5,8 @@
             "includePath": [
                 "${default}",
                 "${workspaceFolder}/../Hazel/src",
-                "${workspaceFolder}/../Hazel/vendor/spdlog/include"
+                "${workspaceFolder}/../Hazel/vendor/spdlog/include",
+                "${workspaceFolder}/../Hazel/vendor/GLFW/include"
             ],
             "defines": [
                 "HZ_PLATFORM_WINDOWS",

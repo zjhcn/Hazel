@@ -6,11 +6,13 @@
                 "${default}",
                 "${workspaceFolder}/../Hazel/src",
                 "${workspaceFolder}/../Hazel/vendor/spdlog/include",
-                "${workspaceFolder}/../Hazel/vendor/GLFW/include"
+                "${workspaceFolder}/../Hazel/vendor/GLFW/include",
+                "${workspaceFolder}/../Hazel/vendor/Glad/include"
             ],
             "defines": [
                 "HZ_PLATFORM_WINDOWS",
-                "HZ_BUILD_DLL"
+                "HZ_BUILD_DLL",
+                "GLFW_INCLUDE_NONE"
             ],
             "windowsSdkVersion": "10.0.19041.0",
             "compilerPath": "D:/Microsoft/Visual Studio/VC/Tools/MSVC/14.29.30133/bin/Hostx64/x64/cl.exe",

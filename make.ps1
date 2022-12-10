@@ -47,40 +47,26 @@ function Sandbox {
     Run "devenv" "Hazel.sln", "/Build", 'Debug', "/Project", "$PWD\Sandbox\Sandbox.vcxproj", "/Projectconfig", "Debug"
 }
 
-if ($Configure.IsPresent) {
-    Configure
-}
-
 if ($Clean.IsPresent) {
     Clean
 }
 
-if ($Launch.IsPresent) {
-    
-    if ($Build.IsPresent) {
-        Hazel
-        Sandbox
-    }
+if ($Configure.IsPresent) {
+    Configure
+}
 
+if ($Build.IsPresent) {
+    Hazel
+    Sandbox
+} else {
     if ($Hazel.IsPresent) {
         Hazel
     }
     if ($Sandbox.IsPresent) {
         Hazel
     }
+}
 
+if ($Launch.IsPresent) {
     Launch
-}
-
-if ($Build.IsPresent) {
-    Hazel
-    Sandbox
-}
-
-if ($Hazel.IsPresent) {
-    Hazel
-}
-
-if ($Sandbox.IsPresent) {
-    Sandbox
 }

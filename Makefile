@@ -2,21 +2,21 @@
 launch:
 	.\bin\Debug-windows-x86_64\Sandbox\Sandbox.exe
 
-build-launch: build
+build-launch: build bin\Debug-windows-x86_64\Sandbox\Sandbox.exe
 	.\bin\Debug-windows-x86_64\Sandbox\Sandbox.exe
 
 build: build-hazel build-sandbox
 
 build-hazel:
-	devenv.exe Hazel.sln /Build "Debug|x64" /Project "Hazel\Hazel.vcxproj" /Projectconfig "Debug|x64"
+	devenv Hazel.sln /Build 'Debug' /Project '.\Hazel\Hazel.vcxproj' /Projectconfig 'Debug'
 
 build-sandbox:
-	devenv.exe Hazel.sln /build "Debug|x64" /project "Sandbox\Sandbox.vcxproj" /projectconfig "Debug|x64"
+	devenv Hazel.sln /Build 'Debug' /Project 'Sandbox\Sandbox.vcxproj' /Projectconfig 'Debug'
 
 configure:
-	./vendor/bin/premake/premake5.exe vs2017
+	./vendor/bin/premake/premake5.exe vs2022
 
 .PHONY : clean
 clean:
-	rm -rf ./bin
-	rm -rf ./bin-int
+	rm -Recurse -Force .\bin
+	rm -Recurse -Force .\bin-int

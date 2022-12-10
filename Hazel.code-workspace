@@ -14,6 +14,7 @@
 		"files.associations": {
 			"iosfwd": "cpp",
 			"istream": "cpp"
-		}
+		},
+		"editor.formatOnSave": true
 	}
 }

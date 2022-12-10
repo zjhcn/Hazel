@@ -29,6 +29,7 @@ x86/
 bld/
 [Bb]in/
 [Bb]in-int/
+!/vendor/bin/
 [Oo]bj/
 [Ll]og/
 [Ll]ogs/

@@ -103,7 +103,12 @@
 		},
 		"editor.formatOnSave": true,
 		"cSpell.words": [
+			"CHECKVERSION",
+			"debugbreak",
 			"Framebuffer",
+			"Gamepad",
+			"Glfw",
+			"Viewports",
 			"Wwindow"
 		]
 	}

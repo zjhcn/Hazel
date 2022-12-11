@@ -8,13 +8,15 @@
                 "${workspaceFolder}/../Hazel/vendor/spdlog/include",
                 "${workspaceFolder}/../Hazel/vendor/GLFW/include",
                 "${workspaceFolder}/../Hazel/vendor/Glad/include",
-                "${workspaceFolder}/../Hazel/vendor/imgui"
+                "${workspaceFolder}/../Hazel/vendor/imgui",
+                "${workspaceFolder}/../Hazel/vendor/glm"
             ],
             "defines": [
                 "HZ_PLATFORM_WINDOWS",
                 "HZ_BUILD_DLL",
                 "GLFW_INCLUDE_NONE",
-                "HZ_DEBUG"
+                "HZ_DEBUG",
+                "_CRT_SECURE_NO_WARNINGS"
             ],
             "windowsSdkVersion": "10.0.19041.0",
             "compilerPath": "D:/Microsoft/Visual Studio/VC/Tools/MSVC/14.29.30133/bin/Hostx64/x64/cl.exe",

@@ -4,12 +4,13 @@
 
 #include <GLFW/glfw3.h>
 
-namespace Hazel {
+namespace Hazel
+{
 
 	class WindowsWindow : public Window
 	{
 	public:
-		WindowsWindow(const WindowProps& props);
+		WindowsWindow(const WindowProps &props);
 		virtual ~WindowsWindow();
 
 		void OnUpdate() override;
@@ -18,14 +19,18 @@ namespace Hazel {
 		inline unsigned int GetHeight() const override { return m_Data.Height; }
 
 		// Window attributes
-		inline void SetEventCallback(const EventCallbackFn& callback) override { m_Data.EventCallback = callback; }
+		inline void SetEventCallback(const EventCallbackFn &callback) override { m_Data.EventCallback = callback; }
 		void SetVSync(bool enabled) override;
 		bool IsVSync() const override;
+
 	private:
-		virtual void Init(const WindowProps& props);
+		virtual void Init(const WindowProps &props);
 		virtual void Shutdown();
+
+		inline virtual void *GetNativeWindow() const { return m_Window; }
+
 	private:
-		GLFWwindow* m_Window;
+		GLFWwindow *m_Window;
 
 		struct WindowData
 		{

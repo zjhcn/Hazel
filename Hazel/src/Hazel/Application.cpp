@@ -6,6 +6,8 @@
 
 #include <Glad/glad.h>
 
+#include "Input.h"
+
 namespace Hazel
 {
 

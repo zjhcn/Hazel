@@ -10,12 +10,10 @@ public:
 
 	void OnUpdate() override
 	{
-		HZ_INFO("ExampleLayer::Update");
 	}
 
 	void OnEvent(Hazel::Event &event) override
 	{
-		HZ_TRACE("{0}", event);
 	}
 };
 

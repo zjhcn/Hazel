@@ -10,12 +10,21 @@
 			"path": "./Hazel"
 		}
 	],
+	"extensions": {
+		"recommendations": [
+			"ms-vscode.cpptools"
+		]
+	},
 	"settings": {
 		"files.associations": {
 			"iosfwd": "cpp",
 			"istream": "cpp",
 			"memory": "cpp"
 		},
-		"editor.formatOnSave": true
+		"editor.formatOnSave": true,
+		"cSpell.words": [
+			"Framebuffer",
+			"Wwindow"
+		]
 	}
 }

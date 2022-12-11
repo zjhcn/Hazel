@@ -7,7 +7,8 @@
                 "${workspaceFolder}/../Hazel/src",
                 "${workspaceFolder}/../Hazel/vendor/spdlog/include",
                 "${workspaceFolder}/../Hazel/vendor/GLFW/include",
-                "${workspaceFolder}/../Hazel/vendor/Glad/include"
+                "${workspaceFolder}/../Hazel/vendor/Glad/include",
+                "${workspaceFolder}/../Hazel/vendor/imgui"
             ],
             "defines": [
                 "HZ_PLATFORM_WINDOWS",

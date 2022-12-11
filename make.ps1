@@ -36,10 +36,6 @@ function Clean {
 }
 
 function Hazel {
-    $TRUE_FALSE = (Test-Path  "$PWD\bin\Debug-windows-x86_64\Sandbox")
-    if ($TRUE_FALSE -eq $false) {
-        mkdir "$PWD\bin\Debug-windows-x86_64\Sandbox"
-    }
     Run "devenv" "Hazel.sln", "/Build", 'Debug', "/Project", "$PWD\Hazel\Hazel.vcxproj", "/Projectconfig", "Debug"
 }
 
@@ -63,7 +59,7 @@ if ($Build.IsPresent) {
         Hazel
     }
     if ($Sandbox.IsPresent) {
-        Hazel
+        Sandbox
     }
 }
 

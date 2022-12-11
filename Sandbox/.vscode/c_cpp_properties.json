@@ -9,7 +9,7 @@
             ],
             "defines": [
                 "HZ_PLATFORM_WINDOWS",
-                "HZ_RELEASE"
+                "HZ_DEBUG"
             ],
             "windowsSdkVersion": "10.0.19041.0",
             "compilerPath": "D:/Microsoft/Visual Studio/VC/Tools/MSVC/14.29.30133/bin/Hostx64/x64/cl.exe",

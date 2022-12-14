@@ -5,7 +5,10 @@ param(
     [switch] $Launch = $false,
     [switch] $Build = $false,
     [switch] $Hazel = $false,
-    [switch] $Sandbox = $false
+    [switch] $Sandbox = $false,
+    [switch] $Glad = $false,
+    [switch] $GLFW = $false,
+    [switch] $ImGui = $false
 )
 
 function Run {
@@ -35,6 +38,15 @@ function Clean {
     Remove-Item -Recurse -Force .\bin-int
 }
 
+function Glad {
+    Run "devenv" "Hazel.sln", "/Build", 'Debug', "/Project", "$PWD\Hazel\vendor\Glad\Glad.vcxproj", "/Projectconfig", "Debug"
+}
+function GLFW {
+    Run "devenv" "Hazel.sln", "/Build", 'Debug', "/Project", "$PWD\Hazel\vendor\GLFW\GLFW.vcxproj", "/Projectconfig", "Debug"
+}
+function ImGui {
+    Run "devenv" "Hazel.sln", "/Build", 'Debug', "/Project", "$PWD\Hazel\vendor\imgui\ImGui.vcxproj", "/Projectconfig", "Debug"
+}
 function Hazel {
     Run "devenv" "Hazel.sln", "/Build", 'Debug', "/Project", "$PWD\Hazel\Hazel.vcxproj", "/Projectconfig", "Debug"
 }
@@ -52,9 +64,21 @@ if ($Configure.IsPresent) {
 }
 
 if ($Build.IsPresent) {
+    Glad
+    GLFW
+    ImGui
     Hazel
     Sandbox
 } else {
+    if ($Glad.IsPresent) {
+        Glad
+    }
+    if ($GLFW.IsPresent) {
+        GLFW
+    }
+    if ($ImGui.IsPresent) {
+        ImGui
+    }
     if ($Hazel.IsPresent) {
         Hazel
     }
